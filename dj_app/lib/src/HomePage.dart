@@ -28,6 +28,12 @@ class _HomePageState extends State<HomePage> {
           HomePageBody(),
         ],
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        label: Text('Like'),
+        icon: Icon(Icons.thumb_up),
+        backgroundColor: Colors.pink,
+      ),
     );
   }
 }
