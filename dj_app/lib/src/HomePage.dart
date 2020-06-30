@@ -7,6 +7,27 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  void _showDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: Text("Alert Dialog title"),
+          content: Text("Alert Dialog body"),
+          actions: <Widget>[
+            FlatButton(
+              child: Text("Close"),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,8 +49,11 @@ class _HomePageState extends State<HomePage> {
           HomePageBody(),
         ],
       ),
+
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
+        onPressed: () {
+          _showDialog();
+        },
         label: Text('Like'),
         icon: Icon(Icons.thumb_up),
         backgroundColor: Colors.pink,
