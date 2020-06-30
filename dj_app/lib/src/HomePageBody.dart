@@ -7,7 +7,12 @@ class HomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        color: Color(0xFF736AB7),
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: [Color(0xFF736AB7), Colors.red])),
+        //color: Color(0xFF736AB7),
         child: CustomScrollView(
           scrollDirection: Axis.vertical,
           slivers: <Widget>[
@@ -25,7 +30,7 @@ class HomePageBody extends StatelessWidget {
                   color: Colors.white,
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w600,
-                  fontSize: 30.0,
+                  fontSize: 40.0,
                 ),
               ),
             ),
