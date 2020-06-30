@@ -12,6 +12,7 @@ class HomePageBody extends StatelessWidget {
           scrollDirection: Axis.vertical,
           slivers: <Widget>[
             SliverAppBar(
+              backgroundColor: Colors.transparent,
               //스크롤을 올리면 AppBar를 숨길지 보일지에 대한 설정
               centerTitle: true,
               floating: true, //스크롤 내릴 때 SliverAppBar가 나옴(true), 안 나옴(false)
@@ -19,12 +20,12 @@ class HomePageBody extends StatelessWidget {
               snap:
                   true, //floating이 true일 때만 true값을 가질 수 있음. floating 중간에 손을 땟을 때 SliverAppBar의 사이즈가 끝으로 감(true), 그대로 멈춤(false)
               title: Text(
-                'title',
+                'DANKA',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w600,
-                  fontSize: 36.0,
+                  fontSize: 30.0,
                 ),
               ),
             ),

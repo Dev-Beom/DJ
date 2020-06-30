@@ -18,7 +18,8 @@ class Summary extends StatelessWidget {
       alignment:
           horizontal ? FractionalOffset.centerLeft : FractionalOffset.center,
       child: Hero(
-        tag: "planet-hero-${restaurant.id}",
+        //화면 전환간에 특정 이미지를 다른 화면으로 비행시키는 것.
+        tag: "planet-hero-${restaurant.id}", //hero의 key역할
         child: Image(
           image: AssetImage(restaurant.image),
           height: 92.0,
@@ -99,8 +100,9 @@ class Summary extends StatelessWidget {
       onTap: horizontal //horizontal이 true일 때 navigator을 사용
           ? () => Navigator.of(context).push(
                 PageRouteBuilder(
+                  //animation 객체를 재공해주는 클래스. 페이지 시에 애니메이션을 사용할 수 있게 해줌.
                   pageBuilder: (_, __, ___) => DetailPage(restaurant),
-                  transitionsBuilder:
+                  transitionsBuilder: //transitionsBuilder는 PageRouteBuilder의 리턴 위젯이고, 경로 전환을 위한 콜백함수 역할을 한다.
                       (context, animation, secondaryAnimation, child) =>
                           FadeTransition(opacity: animation, child: child),
                 ),
@@ -112,6 +114,7 @@ class Summary extends StatelessWidget {
           horizontal: 24.0,
         ),
         child: Stack(
+          //각각의 위젯을 겹쳐서 보여주기 위한 위젯. restaurantCard와 restaurantThumbnail을 겹쳐서 보여준다.
           children: <Widget>[
             restaurantCard,
             restaurantThumbnail,
