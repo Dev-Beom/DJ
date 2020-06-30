@@ -1,3 +1,5 @@
+//표현할 데이터 모델.
+
 class Restaurant {
   final String id;
   final String name;

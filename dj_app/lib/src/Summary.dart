@@ -7,7 +7,8 @@ class Summary extends StatelessWidget {
   final Restaurant restaurant;
   final bool horizontal;
 
-  Summary(this.restaurant, {this.horizontal = true});
+  Summary(this.restaurant,
+      {this.horizontal = true}); //생성자는 restaurant 정보와 horizontal 2개를 받을 수 있게 설정
   Summary.vertical(this.restaurant) : horizontal = false;
 
   @override
@@ -94,7 +95,8 @@ class Summary extends StatelessWidget {
     );
 
     return GestureDetector(
-      onTap: horizontal
+      //GestureDetector은 사용자가 스크린을 터치하거나 더블클릭, 드래그 등등 사용자 모션을 캡처해서 이벤트를 가져오기 위해 사용되는 위젯
+      onTap: horizontal //horizontal이 true일 때 navigator을 사용
           ? () => Navigator.of(context).push(
                 PageRouteBuilder(
                   pageBuilder: (_, __, ___) => DetailPage(restaurant),
@@ -103,7 +105,7 @@ class Summary extends StatelessWidget {
                           FadeTransition(opacity: animation, child: child),
                 ),
               )
-          : null,
+          : null, //horizontal이 false일 때 null을 사용
       child: Container(
         margin: EdgeInsets.symmetric(
           vertical: 16.0,
