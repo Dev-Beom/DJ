@@ -11,13 +11,14 @@ class HomePageBody extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
-                colors: [Color(0xFF736AB7), Colors.red])),
+                colors: [Colors.indigoAccent, Colors.red])),
         //color: Color(0xFF736AB7),
         child: CustomScrollView(
           scrollDirection: Axis.vertical,
           slivers: <Widget>[
             SliverAppBar(
               backgroundColor: Colors.transparent,
+              
               //스크롤을 올리면 AppBar를 숨길지 보일지에 대한 설정
               centerTitle: true,
               floating: true, //스크롤 내릴 때 SliverAppBar가 나옴(true), 안 나옴(false)

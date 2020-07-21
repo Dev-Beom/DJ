@@ -22,6 +22,13 @@ class _HomePageState extends State<HomePage> {
       //     ),
       //   ),
       // ),
+      floatingActionButton: FloatingActionButton.extended(
+        
+        backgroundColor: Colors.pink,
+        onPressed: () {},
+        label: Text('Like'),
+        icon: Icon(Icons.thumb_up),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

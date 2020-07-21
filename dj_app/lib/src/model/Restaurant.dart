@@ -25,7 +25,7 @@ class Restaurant {
 List<Restaurant> restaurants = [
   Restaurant(
     id: "1",
-    name: "Mars",
+    name: "JJiyos",
     location: "Milkyway Galaxy",
     distance: "227.9m Km",
     gravity: "3.711 m/s ",
@@ -66,6 +66,16 @@ List<Restaurant> restaurants = [
   Restaurant(
     id: "5",
     name: "Mercury",
+    location: "Milkyway Galaxy",
+    distance: "54.6m Km",
+    gravity: "3.7 m/s ",
+    description: "Mercury WOW",
+    image: "assets/img/mercury.png",
+    backgroundImg: "assets/img/MercuryBG.jpg",
+  ),
+  Restaurant(
+    id: "6",
+    name: "Lee TTTT",
     location: "Milkyway Galaxy",
     distance: "54.6m Km",
     gravity: "3.7 m/s ",
